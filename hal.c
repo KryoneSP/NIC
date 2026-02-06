@@ -22,7 +22,7 @@ struct device_handle {
 void * hal_create_device() {
     struct device_handle *handle = malloc(sizeof(struct device_handle));
     if (!handle) {
-        close(handle->fd);
+       // close(handle->fd);
         return NULL;
     }
 

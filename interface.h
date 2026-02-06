@@ -1,6 +1,7 @@
 #ifndef _NIC_H
 #define _NIC_H
 
+#include <stdint.h>
 #include <pthread.h>
 #include "hal.h"
 
@@ -55,6 +56,7 @@ typedef struct nic_buffer {
 typedef struct nic_device {
     char name[32];
     unsigned char mac_address[6];
+    uint32_t ip_address;
     unsigned int mtu;
     unsigned short promiscuous_mode;
 
